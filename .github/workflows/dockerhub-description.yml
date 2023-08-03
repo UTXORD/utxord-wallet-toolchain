@@ -1,5 +1,4 @@
-# https://github.com/marketplace/actions/build-and-push-docker-images
-# https://github.com/docker/metadata-action
+# https://github.com/peter-evans/dockerhub-description
 
 name: Update dockerhub description
 
