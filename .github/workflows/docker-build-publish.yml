@@ -54,11 +54,3 @@ jobs:
           push: true
           labels: ${{ steps.meta.outputs.labels }}
           tags: ${{ steps.meta.outputs.tags }}
-      -
-        name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{env.IMAGE_LABEL_NAME}}/${{env.IMAGE_LABEL_APP}}
-          short-description: ${{ github.event.repository.description }}
