@@ -52,4 +52,5 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           push: true
-          tags: ${{env.IMAGE_LABEL_NAME}}/${{env.IMAGE_LABEL_APP}}:latest
+          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
