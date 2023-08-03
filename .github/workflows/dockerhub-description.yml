@@ -16,7 +16,7 @@ env:
   IMAGE_LABEL_APP: utxord-wallet-toolchain
 
 jobs:
-  docker:
+  update_description:
     runs-on: ubuntu-latest
     steps:
       -
