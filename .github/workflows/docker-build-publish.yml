@@ -49,5 +49,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           push: true
           tags: ${{env.IMAGE_LABEL_NAME}}/${{env.IMAGE_LABEL_APP}}:latest
