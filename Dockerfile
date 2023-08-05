@@ -25,3 +25,6 @@ RUN curl https://get.volta.sh | bash \
 
 # I have to add it because /emsdk/emsdk_env.sh completely re-define PATH value at some moment in interactive mode
 RUN echo 'export PATH=${PATH}:/emsdk/upstream/emscripten/tools' >> ${HOME}/.bashrc
+
+# fix possible repo submodule issues
+RUN git config --global --add safe.directory '*'
