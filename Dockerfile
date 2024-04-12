@@ -1,4 +1,4 @@
-FROM emscripten/emsdk:3.1.42
+FROM emscripten/emsdk:3.1.54
 
 ARG VOLTA_HOME="/opt/volta"
 ARG NODEJS_VERSION="18.16.1"
