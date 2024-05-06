@@ -24,7 +24,8 @@ RUN curl https://get.volta.sh | bash \
     && volta install yarn
 
 # I have to add it because /emsdk/emsdk_env.sh completely re-define PATH value at some moment in interactive mode
-RUN echo 'export PATH=${PATH}:/emsdk/upstream/emscripten/tools' >> ${HOME}/.bashrc
+#RUN echo 'export PATH=${PATH}:/emsdk/upstream/emscripten/tools' >> ${HOME}/.bashrc
+RUN echo 'export PATH=${PATH}:/emsdk/upstream/emscripten/tools' >> /emsdk/emsdk_env.sh
 
 # fix possible repo submodule issues
 RUN git config --global --add safe.directory '*'
